@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node ./bin/www",
     "test": "mocha --timeout 60000 --recursive ./tests --watch ./modules",
-    "test-watch": "nodemon --exec 'npm test'"
+    "test-watch": "nodemon --exec 'npm test'",
+    "preinstall": "npx npm-force-resolutions"
   },
   "dependencies": {
     "bluebird": "^3.7.1",
@@ -25,5 +26,8 @@
     "node-mocks-http": "^1.8.0",
     "sinon": "^7.5.0",
     "sinon-mongoose": "^2.3.0"
+  },
+  "resolutions": {
+    "minimist": "^1.2.5"
   }
 }
